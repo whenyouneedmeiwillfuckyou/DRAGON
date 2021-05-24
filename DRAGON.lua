@@ -13120,7 +13120,7 @@ keyboard.inline_keyboard = {
 {text = 'اوامر التسليه', callback_data="/help7"},
 },
 {
-{text = '☉قفل و القفل☉', callback_data="/help"},{text = 'تعطيل و تفعيل', callback_data="/help2"},
+{text = '☉قفل و القفل☉', callback_data="/help1"},{text = 'تعطيل و تفعيل', callback_data="/help2"},
 },
 }
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
