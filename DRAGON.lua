@@ -1105,7 +1105,7 @@ end
 if text == 'مبرمج السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
-[CH](t.me/CH_POWLER)
+[CHAN](t.me/CH_POWLER)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
@@ -2979,7 +2979,7 @@ end
 
 if text == 'مبرمج السورس' then
 local Text = [[ 
-[CH](t.me/CH_POWLER)
+[CHA](t.me/CH_POWLER)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
