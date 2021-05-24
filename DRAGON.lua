@@ -11864,7 +11864,7 @@ Text = ' ♕ هوا دا الي ضافك😹← '..Name
 sendText(msg.chat_id_,Text,msg.id_/2097152/0.5,'md')
 end,nil)
 else
-send(msg.chat_id_, msg.id_,' ♕ انت دخلت عبر الرابط يوسخ 🌝') 
+send(msg.chat_id_, msg.id_,' ♕ انت دخلت عبر الرابط وبلاش اغلط فيك 🌝') 
 end
 end,nil)
 else
