@@ -1119,7 +1119,7 @@ end
 
 if text == 'مالك السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
-local Text = [[ 
+local Text = [[ DEV_POWLER
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
