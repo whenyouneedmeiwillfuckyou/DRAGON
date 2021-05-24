@@ -1102,7 +1102,7 @@ if text == 'الاصدار ' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 send(msg.chat_id_, msg.id_,' ♕ اصدار سورس باولر { s: 6.7}')
 end
-if text == 'مبرمج السورس' and DevSoFi(msg) then
+if text == 'السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
 [CHAN](t.me/CH_POWLER)
