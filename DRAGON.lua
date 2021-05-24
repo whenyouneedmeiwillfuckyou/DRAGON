@@ -2702,22 +2702,21 @@ end
 end
 end,nil)   
 end
-if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
-local Text = [[
+
+if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' or text == 'سورس مين' then  
+local Text = [[  
  🕊  مرحبا بك في سورس باولر الاعظم  🕊 
 اتبع الازرار إلى تحت ↓
-لدخول لحسابات السورس 
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/I_B_N_M_A_N_I_A_L"}},
-{{text = '  ❨ L E G A N D ♕  ❩ ',url="t.me/L_E_p"}},
-{{text = '  ❨ D E S H A ♕  ❩ ',url="t.me/DESHAXBLACK"}},
-{{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIX_BLACK"}},
+لدخول لحسابات السورس  
+]]  
+keyboard = {}  
+keyboard.inline_keyboard = {  
+{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/I_B_N_M_A_N_I_A_L"}, {text = '  ❨ L E G A N D ♕  ❩ ',url="t.me/L_E_p"}},
+{{text = '  ❨ D E S H A ♕  ❩ ',url="t.me/DESHAXBLACK"},{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIX_BLACK"}},
 {{text = '  ❨ SＯＵＲＣＥ ♕  ❩ ', url="t.me/CH_POWLER"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+}  
+local msg_id = msg.id_/2097152/0.5  
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))  
 end
 
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
