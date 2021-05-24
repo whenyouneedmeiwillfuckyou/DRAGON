@@ -2745,7 +2745,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if text == 'مانيال' or text == 'منيل' or text == 'المنيل' or text == 'منيال' then
+if text == 'مانيال' or text == 'منيل' or text == 'المنيل' or text == 'السورس' then
 local Text = [[
 المبرمج منيل لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
@@ -2773,13 +2773,13 @@ https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. 
 end
 if text == 'مسي' or text == 'يا ميسي' or text == 'ميسي' or text == 'يا مسي' or text == 'ميسي فين' then
 local Text = [[
-المطور مسي لو حابب تتواصل معاه
+المطور ميسي لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ D E S H A ♕  ❩ ',url="t.me/MESSIX_BLACK"}},
+{{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIX_BLACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
