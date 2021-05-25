@@ -1116,19 +1116,18 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-
 if text == 'مالك السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
-local Text = [[ DEV_POWLER
+local Text = [[ 
+[POWLER](t.me/DEV_POWLER)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '  ❨ P O W L E R ♕  ❩ ',url="t.me/DEV_POWLER"}},
+{{text = 'مالك السورس', url="t.me/t.me/DEV_POWLER"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-
 if text == 'قناه السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
@@ -1158,7 +1157,7 @@ database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true)
 send(msg.chat_id_, msg.id_," ♕ ارسل اليه الاسم الان ")
 return false
 end
-if text == ("الثانوين") and SudoBot(msg) then
+if text == ("الثانويين") or text == ("الثنويين") and SudoBot(msg) then
 local list = database:smembers(bot_id.."Dev:SoFi:2")
 t = "\n♕ قائمة مطورين الثانويين للبوت \n≪━───━POWLER━───━≫\n"
 for k,v in pairs(list) do
