@@ -300,9 +300,9 @@ return var
 end 
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1236115319) then  
-var = ' مبرمج السورس'
+var = ' مبرمجين السورس'
 elseif tonumber(user_id) == tonumber(1826774362) then
-var = 'مبرمج السورس'
+var = 'مبرمجين السورس'
 elseif tonumber(user_id) == tonumber(1790118261) then
 var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(1287219286) then
@@ -881,8 +881,8 @@ end
 if DevSoFi(msg) then
 local bl = 'انت الان المطور الاساسي في البوت \n سورس باولر\n يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/CH_POWLER)'
 local keyboard = {
-{'مبرمج السورس'},
 {'الاحصائيات','المطور','الثانوين'},
+{'مبرمجين السورس','مطورين السورس'},
 {'قناه السورس','بوت تواصل'},
 {'اضف رد عام','حذف رد عام'},
 {'اضف رد متعدد','حذف رد متعدد'},
@@ -922,7 +922,7 @@ if start then
 keyboard = start
 else
 keyboard = {
-{'مبرمج السورس'},
+{'مبرمجين السورس','مطورين السورس'},
 {'♕━───━POWLER━───━♕'},
 {'قناة السورس','بوت التواصل'},
 {'♕━───━POWLER━───━♕'},
@@ -2703,30 +2703,17 @@ end
 end,nil)   
 end
 
-if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' or text == 'سورس مين' then  
-local Text = [[  
+if text == 'سورس' or text == 'يا سورس' or text == 'السورس' then
+local Text = [[
  🕊  مرحبا بك في سورس باولر الاعظم  🕊 
 اتبع الازرار إلى تحت ↓
-لدخول لحسابات السورس  
-]]  
-keyboard = {}  
-keyboard.inline_keyboard = {  
-{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/I_B_N_M_A_N_I_A_L"}, {text = '  ❨ L E G A N D ♕  ❩ ',url="t.me/L_E_p"}},
-{{text = '  ❨ D E S H A ♕  ❩ ',url="t.me/DESHAXBLACK"},{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIX_BLACK"}},
-{{text = '  ❨ SＯＵＲＣＥ ♕  ❩ ', url="t.me/CH_POWLER"}},
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))  
-end
-
-if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
-local Text = [[
- ♕ اهلا بك في سورس باولر الجمدان لو عايز بوت بأسعار منسبه وبوت مميز كلمني  ♕ 
+لدخول لحسابات السورس
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/I_B_N_M_A_N_I_A_L"}},
-{{text = '  ❨ TＷＡＳＯＬ ♕  ❩ ',url="t.me/POWLER1_BOT"}}, 
+{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/I_B_N_M_A_N_I_A_L"},{text = '  ❨ L E G A N D ♕  ❩ ',url="t.me/L_E_p"}},
+{{text = '  ❨ D E S H A ♕  ❩ ',url="t.me/DESHAXBLACK"},{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIX_BLACK"}},
+{{text = '  ❨ SＯＵＲＣＥ ♕  ❩ ', url="t.me/CH_POWLER"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2758,28 +2745,17 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if text == 'ديشا' or text == 'يا ديشا' or text == 'واد ياديشا' or text == 'ياديشا' or text == 'ديشا فين' then
-local Text = [[
-المطور ديشا لو حابب تتواصل معاه
-اتبع الزر إلى تحت ↓
 
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '  ❨ D E S H A ♕  ❩ ',url="t.me/DESHAXBLACK"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-if text == 'مسي' or text == 'يا ميسي' or text == 'ميسي' or text == 'يا مسي' or text == 'ميسي فين' then
+if text == 'مطور' or text == 'مطور السورس' or text == 'المطورين' or text == 'مطورين السورس' then
 local Text = [[
-المطور ميسي لو حابب تتواصل معاه
+المطورين لو حابب تتواصل معاهم
 اتبع الزر إلى تحت ↓
 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIX_BLACK"}},
+{{text = '  ❨ D E S H A ♕  ❩ ',url="t.me/DESHAXBLACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2988,7 +2964,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'مبرمج السورس' then
+if text == 'مبرمجين السورس' then
 local Text = [[ 
 [CHA](t.me/CH_POWLER)
 ]] 
@@ -3970,11 +3946,11 @@ send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر البوت عام")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(1236115319) then  
-send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمجين السورس عام")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(1826774362) then  
-send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمجين السورس عام")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(1790118261) then  
@@ -4024,11 +4000,11 @@ send(msg.chat_id_, msg.id_, " ♕ لا يمكنك حظر المطور الاسا
 return false 
 end
 if result.id_ == tonumber(1236115319) then
-send(msg.chat_id_, msg.id_, " ♕ لا يمكنك حظر مبرمج السورس \n")
+send(msg.chat_id_, msg.id_, " ♕ لا يمكنك حظر مبرمجين السورس \n")
 return false 
 end
 if result.id_ == tonumber(1826774362) then  
-send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمجين السورس عام")
 return false 
 end
 if result.id_ == tonumber(1790118261) then  
@@ -4072,11 +4048,11 @@ send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر البوت عام")
 return false 
 end
 if tonumber(userid) == tonumber(1236115319) then  
-send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمجين السورس عام")
 return false 
 end
 if tonumber(userid) == tonumber(1826774362) then  
-send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمجين السورس عام")
 return false 
 end
 if tonumber(userid) == tonumber(1790118261) then  
@@ -4121,11 +4097,11 @@ send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم البوت عام")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(1236115319) then  
-send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمجين السورس عام")
 return false 
 end
 if tonumber(userid) == tonumber(1826774362) then  
-send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمجين السورس عام")
 return false 
 end
 if tonumber(userid) == tonumber(1790118261) then  
@@ -4174,11 +4150,11 @@ send(msg.chat_id_, msg.id_, " ♕ لا يمكنك كتم المطور الاسا
 return false 
 end
 if result.id_ == tonumber(1236115319) then
-send(msg.chat_id_, msg.id_, " ♕ لا يمكنك كتم مبرمج السورس \n")
+send(msg.chat_id_, msg.id_, " ♕ لا يمكنك كتم مبرمجين السورس \n")
 return false 
 end
 if tonumber(userid) == tonumber(1826774362) then  
-send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمجين السورس عام")
 return false 
 end
 if tonumber(userid) == tonumber(1790118261) then  
@@ -4222,11 +4198,11 @@ send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم البوت عام")
 return false 
 end
 if tonumber(userid) == tonumber(1236115319) then  
-send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمجين السورس عام")
 return false 
 end
 if tonumber(userid) == tonumber(1826774362) then  
-send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمج السورس عام")
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمجين السورس عام")
 return false 
 end
 if tonumber(userid) == tonumber(1790118261) then  
