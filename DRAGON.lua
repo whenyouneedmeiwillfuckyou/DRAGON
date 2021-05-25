@@ -2703,15 +2703,16 @@ end
 end,nil)   
 end
 
-if text == 'سورس' or text == 'يا سورس' or text == 'السورس' then
+if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
- 🕊  مرحبا بك في سورس باولر الاعظم  🕊 
+ 🕊  مرحبا بك في سورس مسلم بلص  🕊 
 اتبع الازرار إلى تحت ↓
-لدخول لحسابات السورس
+لدخول لحسابات السورس 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/I_B_N_M_A_N_I_A_L"},{text = '  ❨ L E G A N D ♕  ❩ ',url="t.me/L_E_p"}},
+{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/I_B_N_M_A_N_I_A_L"}},
+{{text = '  ❨ L E G A N D ♕  ❩ ',url="t.me/L_E_p"}},
 {{text = '  ❨ SＯＵＲＣＥ ♕  ❩ ', url="t.me/CH_POWLER"}},
 }
 local msg_id = msg.id_/2097152/0.5
