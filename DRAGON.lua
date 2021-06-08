@@ -138,12 +138,7 @@ _redis = load_redis()
 --------------------------------------------------------------------------------------------------------------
 print([[
   _      ___    ___     _     _  _   ___  
- | |    | __|  / __|   /_\   | \| | |   \ 
- | |__  | _|  | (_ |  / _ \  | .` | | |) |
- |____| |___|  \___| /_/ \_\ |_|\_| |___/ 
- 
-> CH › @CH_POWLER
-~> DEVELOPER › @L_E_p 
+> CH › @CH_POWLER 
 ]])
 sudos = dofile("./INfO.lua") 
 SUDO = tonumber(sudos.SUDO)
@@ -2710,23 +2705,37 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/I_B_N_M_A_N_I_A_L"}},
-{{text = '  ❨ L E G A N D ♕  ❩ ',url="t.me/L_E_p"}},
+{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/MANIALXBLACK"}},
+{{text = '  ❨ D E S H A ♕  ❩ ',url="t.me/DESHAXBLACK"}},
+{{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIXBLACK"}},
 {{text = '  ❨ SＯＵＲＣＥ ♕  ❩ ', url="t.me/CH_POWLER"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if text == 'ليجاند' or text == 'Legand' or text == 'legand' then
+if text == 'ميسي' or text == 'مسي' or text == 'ميسى' then
 local Text = [[
-المبرمج ليجاند لو حابب تتواصل معاه
+المطور ميسي لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ L E G A N D ♕  ❩ ',url="t.me/L_E_p"}},
+{{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIXBLACK"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'ديشا' or text == 'ديشاا' or text == 'يا ديشا' then
+local Text = [[
+المطور ديشا لو حابب تتواصل معاه
+اتبع الزر إلى تحت ↓
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '  ❨ D E S H A ♕  ❩ ',url="t.me/DESHAXBLACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2739,13 +2748,12 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/I_B_N_M_A_N_I_A_L"}},
+{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/MANIALXBLACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-
-if text == 'مطور' or text == 'مطور السورس' or text == 'المطورين' or text == 'مطورين السورس' then
+if text == 'المطورين' or text == 'مطورين السورس'  then
 local Text = [[
 المطورين لو حابب تتواصل معاهم
 اتبع الزر إلى تحت ↓
@@ -2753,8 +2761,8 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIX_BLACK"}},
 {{text = '  ❨ D E S H A ♕  ❩ ',url="t.me/DESHAXBLACK"}},
+{{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIXBLACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2963,34 +2971,20 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'مبرمجين السورس' then
+if text == 'مبرمج السورس' then
 local Text = [[ 
 [CHA](t.me/CH_POWLER)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '  ❨ M A N I A L ♕  ❩ ', url="t.me/I_B_N_M_A_N_I_A_L"}}, 
-{{text = '  ❨ L E G A N D ♕  ❩ ', url="t.me/L_E_p"}}, 
+{{text = '  ❨ M A N I A L ♕  ❩ ', url="t.me/MANIALXBLACK"}}, 
 {{text = '  ❨ SＯＵＲＣＥ ♕  ❩ ', url="t.me/CH_POWLER"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'مطور السورس' then
-local Text = [[ 
-[CH](t.me/CH_POWLER)
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '  ❨ D E S H A  ♕  ❩ ',url="t.me/DESHAXBLACK"}},
-{{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIX_BLACK"}},
-{{text = '  ❨ SＯＵＲＣＥ ♕  ❩ ', url="t.me/CH_POWLER"}},
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'العاب باولر' or text == 'العاب مطوره' or text == 'العاب متطوره' then  
+if text == 'العاب باولر' or text == 'العاب مطوره' or text == 'العاب متطوره' or text == 'العاب' or text == 'الالعاب' then  
 local Text = [[  
  ♕ اهلا في قائمه الالعاب المتطوره سورس باولر  ♕ 
 تفضل اختر لعبه من القائمه 
