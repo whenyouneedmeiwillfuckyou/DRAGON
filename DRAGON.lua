@@ -11370,7 +11370,7 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,d
 end,nil)
 end
 
-end
+
 
 if text == 'انا مين' and SudoBot(msg) then 
 send(msg.chat_id_,msg.id_, '[انت مطوري نور عنيا🥺🤍](t.me/CH_POWLER)') 
