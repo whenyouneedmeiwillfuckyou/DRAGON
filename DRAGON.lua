@@ -336,15 +336,17 @@ var = database:get(bot_id.."Memp:Rd"..msg.chat_id_) or 'العضو'
 tdcli_function ({ID = "GetUser",user_id_ =  user_id},function(arg,ta) 
  
  if string.find(ta.username_:upper(), "XBLACK") then
-  send(chat_id, msg.id_,' ♕ ر22تبتك في البوت ← '..var)
+--send(chat_id, msg.id_,' ♕ ر22تبتك في البوت ← '..var)
 local Name = '['..string.sub(ta.first_name_,0, 40)..'](tg://user?id='..ta.id_..')'
  var = Name..' \n اكس بلاك'
-  send(chat_id, msg.id_,var)
+  
 
  
 
 end
 end,nil) 
+
+--send(chat_id, msg.id_,var)
 
 
 
