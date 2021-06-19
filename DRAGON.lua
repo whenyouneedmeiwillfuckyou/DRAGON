@@ -11836,7 +11836,7 @@ local username = ' ['..data.first_name_..'](t.me/'..(data.username_ or 'CH_POWLE
  if string.find(data.username_:upper(), "XBLACK") then
  Name = '['..string.sub(data.first_name_,0, 40)..']'
 
- rtp =  [اكس بلاك](https://t.me/XBLACKTEAM)
+ rtp =  اكس بلاك (https://t.me/XBLACKTEAM)
 send(msg.chat_id_, msg.id_,'*- العضو ← (*'..username..'*)\n- الرتبه ←  '..rtp..'  *\n')
  else
   rtp = Rutba(result.sender_user_id_,msg.chat_id_)
