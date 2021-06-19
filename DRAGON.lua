@@ -330,20 +330,21 @@ var = database:get(bot_id.."Mod:Rd"..msg.chat_id_) or 'الادمن'
 elseif database:sismember(bot_id..'Special:User'..chat_id, user_id) then  
 var = database:get(bot_id.."Special:Rd"..msg.chat_id_) or 'المميز'  
 else  
+
+
+ tdcli_function ({ID = "GetUser",user_id_ =  user_id},function(arg,ta) 
 var = database:get(bot_id.."Memp:Rd"..msg.chat_id_) or 'العضو'
-
-
-tdcli_function ({ID = "GetUser",user_id_ =  user_id},function(arg,ta) 
  
  if string.find(ta.username_:upper(), "XBLACK") then
---send(chat_id, msg.id_,' ♕ ر22تبتك في البوت ← '..var)
-local Name = '['..string.sub(ta.first_name_,0, 40)..'](tg://user?id='..ta.id_..')'
+
+ Name = '['..string.sub(ta.first_name_,0, 40)..'](tg://user?id='..ta.id_..')'
  var = Name..' \n اكس بلاك'
   
 
- 
+ return var
 
 end
+
 end,nil) 
 
 --send(chat_id, msg.id_,var)
