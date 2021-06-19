@@ -11352,8 +11352,8 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, 
 end
 
 if text == 'رتبتي' then
-function start_function(extra, result, success)
-tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(extra,data) 
+
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,data) 
  rtp = Rutba(result.sender_user_id_,msg.chat_id_)
 
  if string.find(data.username_:upper(), "XBLACK") then
