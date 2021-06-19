@@ -11834,9 +11834,10 @@ function start_function(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(extra,data) 
 local username = ' ['..data.first_name_..'](t.me/'..(data.username_ or 'CH_POWLER')..')'
  if string.find(data.username_:upper(), "XBLACK") then
- Name = '['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..data.id_..')'
- rtp = Name..' \n اكس بلاك'
-send(msg.chat_id_, msg.id_,'*- العضو ← (*'..username..'*)\n- الرتبه ← '..rtp..' *\n')
+ Name = '['..string.sub(data.first_name_,0, 40)..']'
+
+ rtp =  '[اكس بلاك](https://t.me/XBLACKTEAM)'
+send(msg.chat_id_, msg.id_,'*- العضو ← (*'..username..'*)\n- الرتبه ←  '..rtp..'  *\n')
  else
   rtp = Rutba(result.sender_user_id_,msg.chat_id_)
   send(msg.chat_id_, msg.id_,'*- العضو ← (*'..username..'*)\n- الرتبه ← ('..rtp..')*\n')
