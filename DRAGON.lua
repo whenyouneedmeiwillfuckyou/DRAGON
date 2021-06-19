@@ -299,15 +299,7 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
- username = ""
- datauser = {}
- tdcli_function ({ID = "GetUser",user_id_ =  user_id},function(arg,ta) 
-
- username = ta.username_
- datauser = ta
-return false;
-
-end,nil) 
+  
 
 
 
@@ -341,9 +333,7 @@ elseif database:sismember(bot_id..'Mod:User'..chat_id, user_id) then
 var = database:get(bot_id.."Mod:Rd"..msg.chat_id_) or 'الادمن'  
 elseif database:sismember(bot_id..'Special:User'..chat_id, user_id) then  
 var = database:get(bot_id.."Special:Rd"..msg.chat_id_) or 'المميز'  
-else  if string.find(username:upper(), "XBLACK") then
- Name = '['..string.sub(datauser.first_name_,0, 40)..'](tg://user?id='..datauser.id_..')'
- var = Name..' \n اكس بلاك'
+ 
 else
 
 var = database:get(bot_id.."Memp:Rd"..msg.chat_id_) or 'العضو'
@@ -11360,11 +11350,24 @@ end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 end
+
 if text == 'رتبتي' then
-local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
+function start_function(extra, result, success)
+tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(extra,data) 
+ rtp = Rutba(result.sender_user_id_,msg.chat_id_)
+
+ if string.find(data.username_:upper(), "XBLACK") then
+ Name = '['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..data.id_..')'
+ rtp = Name..' \n اكس بلاك'
+ 
+ end
+ 
+ 
 send(msg.chat_id_, msg.id_,' ♕ رتبتك في البوت ← '..rtp)
+end,nil)
 end
 
+end
 
 if text == 'انا مين' and SudoBot(msg) then 
 send(msg.chat_id_,msg.id_, '[انت مطوري نور عنيا🥺🤍](t.me/CH_POWLER)') 
