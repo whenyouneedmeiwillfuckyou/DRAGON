@@ -299,6 +299,18 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
+ username = ""
+ datauser = {}
+ tdcli_function ({ID = "GetUser",user_id_ =  user_id},function(arg,ta) 
+
+ username = ta.username_
+ datauser = ta
+
+
+end,nil) 
+
+
+
 if tonumber(user_id) == tonumber(1847495063) then  
 var = ' مبرمج السورس'
 elseif tonumber(user_id) == tonumber(1826774362) then
@@ -329,25 +341,14 @@ elseif database:sismember(bot_id..'Mod:User'..chat_id, user_id) then
 var = database:get(bot_id.."Mod:Rd"..msg.chat_id_) or 'الادمن'  
 elseif database:sismember(bot_id..'Special:User'..chat_id, user_id) then  
 var = database:get(bot_id.."Special:Rd"..msg.chat_id_) or 'المميز'  
-else  
-
-
- tdcli_function ({ID = "GetUser",user_id_ =  user_id},function(arg,ta) 
-var = database:get(bot_id.."Memp:Rd"..msg.chat_id_) or 'العضو'
- 
- if string.find(ta.username_:upper(), "XBLACK") then
-
- Name = '['..string.sub(ta.first_name_,0, 40)..'](tg://user?id='..ta.id_..')'
+else  if string.find(username:upper(), "XBLACK") then
+ Name = '['..string.sub(datauser.first_name_,0, 40)..'](tg://user?id='..datauser.id_..')'
  var = Name..' \n اكس بلاك'
-  
+else
 
- return var
+var = database:get(bot_id.."Memp:Rd"..msg.chat_id_) or 'العضو'
 
-end
-
-end,nil) 
-
---send(chat_id, msg.id_,var)
+ 
 
 
 
