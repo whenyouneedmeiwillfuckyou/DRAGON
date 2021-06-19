@@ -305,7 +305,7 @@ function Rutba(user_id,chat_id)
 
  username = ta.username_
  datauser = ta
-
+return false;
 
 end,nil) 
 
