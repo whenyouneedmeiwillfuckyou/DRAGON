@@ -11354,16 +11354,19 @@ end
 if text == 'رتبتي' then
 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,data) 
- rtp = Rutba(result.sender_user_id_,msg.chat_id_)
+
 
  if string.find(data.username_:upper(), "XBLACK") then
  Name = '['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..data.id_..')'
  rtp = Name..' \n اكس بلاك'
- 
+ send(msg.chat_id_, msg.id_,' ♕ رتبتك في البوت ← '..rtp)
+ else
+  rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
+  send(msg.chat_id_, msg.id_,' ♕ رتبتك في البوت ← '..rtp)
  end
  
  
-send(msg.chat_id_, msg.id_,' ♕ رتبتك في البوت ← '..rtp)
+
 end,nil)
 end
 
