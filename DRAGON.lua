@@ -169,7 +169,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1236115319,1847495063,1826774362,1802788797,1799990659}   
+sudo_users = {SUDO,1236115319,1826774362,1802788797,1799990659,1445558259}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -264,8 +264,10 @@ var = true
 elseif tonumber(user_id) == tonumber(1826774362) then
 var = true
 elseif tonumber(user_id) == tonumber(1802788797) then
-var = true
+var = true 
 elseif tonumber(user_id) == tonumber(1799990659) then
+var = true
+elseif tonumber(user_id) == tonumber(1445558259) then
 var = true
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
@@ -310,6 +312,8 @@ var = 'مبرمج السورس'
 elseif tonumber(user_id) == tonumber(1802788797) then
 var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(1799990659) then
+var = 'مطور السورس'
+elseif tonumber(user_id) == tonumber(1445558259) then
 var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
@@ -3971,6 +3975,10 @@ if tonumber(result.sender_user_id_) == tonumber(1799990659) then
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مطور السورس عام")
 return false 
 end
+if tonumber(result.sender_user_id_) == tonumber(1445558259) then  
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مطور السورس عام")
+return false 
+end
 database:sadd(bot_id..'GBan:User', result.sender_user_id_)
 chat_kick(result.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},
@@ -4025,6 +4033,10 @@ if result.id_ == tonumber(1799990659) then
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مطور السورس عام")
 return false 
 end
+if result.id_ == tonumber(1445558259) then  
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مطور السورس عام")
+return false 
+end
 usertext = '\n ♕ العضو ← ['..result.title_..'](t.me/'..(username or 'CH_POWLER')..')'
 status  = '\n ♕ تم حظره عام من الجروبات'
 texts = usertext..status
@@ -4073,6 +4085,10 @@ if tonumber(userid) == tonumber(1799990659) then
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مطور السورس عام")
 return false 
 end
+if tonumber(userid) == tonumber(1445558259) then  
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مطور السورس عام")
+return false 
+end
 database:sadd(bot_id..'GBan:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
@@ -4107,11 +4123,11 @@ send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم البوت عام")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(1847495063) then  
-send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمجين السورس عام")
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
 if tonumber(userid) == tonumber(1826774362) then  
-send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمجين السورس عام")
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
 if tonumber(userid) == tonumber(1802788797) then  
@@ -4119,6 +4135,10 @@ send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مطور السورس �
 return false 
 end
 if tonumber(userid) == tonumber(1799990659) then  
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مطور السورس عام")
+return false 
+end
+if tonumber(userid) == tonumber(1445558259) then  
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مطور السورس عام")
 return false 
 end
@@ -4175,6 +4195,10 @@ if tonumber(userid) == tonumber(1799990659) then
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مطور السورس عام")
 return false 
 end
+if tonumber(userid) == tonumber(1445558259) then  
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مطور السورس عام")
+return false 
+end
 usertext = '\n ♕ العضو ← ['..result.title_..'](t.me/'..(username or 'CH_POWLER')..')'
 status  = '\n ♕ تم كتمه عام من الجروبات'
 texts = usertext..status
@@ -4220,6 +4244,10 @@ send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مطور السورس �
 return false 
 end
 if tonumber(userid) == tonumber(1799990659) then  
+send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مطور السورس عام")
+return false 
+end
+if tonumber(userid) == tonumber(1445558259) then  
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مطور السورس عام")
 return false 
 end
