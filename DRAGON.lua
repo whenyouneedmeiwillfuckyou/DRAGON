@@ -169,7 +169,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1236115319,1826774362,1802788797,1799990659,1445558259}   
+sudo_users = {SUDO,1236115319,1835919208,1802788797,1799990659,1445558259}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -261,7 +261,7 @@ end
 function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(1236115319) then  
 var = true
-elseif tonumber(user_id) == tonumber(1826774362) then
+elseif tonumber(user_id) == tonumber(1835919208) then
 var = true
 elseif tonumber(user_id) == tonumber(1802788797) then
 var = true 
@@ -307,7 +307,7 @@ function Rutba(user_id,chat_id)
 
 if tonumber(user_id) == tonumber(1236115319) then  
 var = ' مبرمج السورس'
-elseif tonumber(user_id) == tonumber(1826774362) then
+elseif tonumber(user_id) == tonumber(1835919208) then
 var = 'مبرمج السورس'
 elseif tonumber(user_id) == tonumber(1802788797) then
 var = 'مطور السورس'
@@ -2725,7 +2725,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/MANIALXBLACK"}},
+{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/I_B_N_M_A_N_I_A_L"}},
 {{text = '  ❨ L E G A N D ♕  ❩ ',url="t.me/L_E_p"}},
 {{text = '  ❨ SＯＵＲＣＥ ♕  ❩ ', url="t.me/CH_POWLER"}},
 }
@@ -2754,7 +2754,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/MANIALXBLACK"}},
+{{text = '  ❨ M A N I A L ♕  ❩ ',url="t.me/I_B_N_M_A_N_I_A_L"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -3963,7 +3963,7 @@ if tonumber(result.sender_user_id_) == tonumber(1847495063) then
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمجين السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1826774362) then  
+if tonumber(result.sender_user_id_) == tonumber(1835919208) then  
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمجين السورس عام")
 return false 
 end
@@ -4021,7 +4021,7 @@ if result.id_ == tonumber(1847495063) then
 send(msg.chat_id_, msg.id_, " ♕ لا يمكنك حظر مبرمجين السورس \n")
 return false 
 end
-if result.id_ == tonumber(1826774362) then  
+if result.id_ == tonumber(1835919208) then  
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمجين السورس عام")
 return false 
 end
@@ -4073,7 +4073,7 @@ if tonumber(userid) == tonumber(1847495063) then
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمجين السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(1826774362) then  
+if tonumber(userid) == tonumber(1835919208) then  
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع حظر مبرمجين السورس عام")
 return false 
 end
@@ -4126,7 +4126,7 @@ if tonumber(result.sender_user_id_) == tonumber(1847495063) then
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(1826774362) then  
+if tonumber(userid) == tonumber(1835919208) then  
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -4183,7 +4183,7 @@ if result.id_ == tonumber(1847495063) then
 send(msg.chat_id_, msg.id_, " ♕ لا يمكنك كتم مبرمجين السورس \n")
 return false 
 end
-if tonumber(userid) == tonumber(1826774362) then  
+if tonumber(userid) == tonumber(1835919208) then  
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمجين السورس عام")
 return false 
 end
@@ -4235,7 +4235,7 @@ if tonumber(userid) == tonumber(1847495063) then
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمجين السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(1826774362) then  
+if tonumber(userid) == tonumber(1835919208) then  
 send(msg.chat_id_, msg.id_, " ♕ لا تسطيع كتم مبرمجين السورس عام")
 return false 
 end
