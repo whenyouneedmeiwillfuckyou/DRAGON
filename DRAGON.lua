@@ -11753,7 +11753,7 @@ if text then
 list = {'💋'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[عايز من ده..💋🥀](t.me/CH_POWLER)') 
+send(msg.chat_id_,msg.id_, '[عايز من ده..🦋🥀](t.me/CH_POWLER)') 
 return false
 end
 end
